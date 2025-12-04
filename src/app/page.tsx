@@ -6,54 +6,54 @@ import Image from "next/image"
 export default function Home() {
   const phoneNumber = "(203) 555-0123"
   const whatsappNumber = "12035550123"
-  const whatsappMessage = "Olá! Preciso de um mecânico."
+  const whatsappMessage = "Hello! I need a mechanic."
 
   const services = [
     { 
       icon: Wrench, 
-      title: "Preventiva", 
-      description: "Troca de óleo, filtros, revisão geral",
+      title: "Preventive Maintenance", 
+      description: "Oil change, filters, general inspection",
       price: "$100–$150"
     },
     { 
       icon: Zap, 
-      title: "Diagnóstico Eletrônico", 
-      description: "Scanner, reset de luzes",
+      title: "Electronic Diagnostics", 
+      description: "Scanner, light reset",
       price: "$80–$120"
     },
     { 
       icon: CircleDot, 
-      title: "Freios e Suspensão", 
-      description: "Pastilhas, discos, amortecedores",
+      title: "Brakes & Suspension", 
+      description: "Pads, discs, shock absorbers",
       price: "$200–$500"
     },
     { 
       icon: Cog, 
-      title: "Elétrica e Partida", 
-      description: "Bateria, alternador",
+      title: "Electrical & Starting", 
+      description: "Battery, alternator",
       price: "$150–$400"
     },
     { 
       icon: Clock, 
-      title: "Socorro Rápido 24h", 
-      description: "Pneu furado, pane seca",
+      title: "24/7 Quick Rescue", 
+      description: "Flat tire, out of gas",
       price: "$100–$200"
     },
     { 
       icon: Users, 
-      title: "Solução Corporativa", 
-      description: "Planos para frotas",
-      price: "Personalizado"
+      title: "Corporate Solution", 
+      description: "Fleet plans",
+      price: "Custom"
     },
   ]
 
   const differentials = [
-    { icon: Clock, text: "Atendimento Rápido e Profissional no Local" },
-    { icon: Shield, text: "Mecânicos Credenciados e Uniformizados" },
-    { icon: CheckCircle, text: "Pagamento Online Seguro e Transparente" },
-    { icon: FileText, text: "Histórico Digital Completo do Veículo" },
-    { icon: Wrench, text: "Garantia em Todos os Serviços" },
-    { icon: Smartphone, text: "App com Rastreamento em Tempo Real" },
+    { icon: Clock, text: "Fast and Professional On-Site Service" },
+    { icon: Shield, text: "Certified and Uniformed Mechanics" },
+    { icon: CheckCircle, text: "Secure and Transparent Online Payment" },
+    { icon: FileText, text: "Complete Digital Vehicle History" },
+    { icon: Wrench, text: "Warranty on All Services" },
+    { icon: Smartphone, text: "App with Real-Time Tracking" },
   ]
 
   const cities = {
@@ -122,36 +122,36 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
             <div className="inline-block mb-6 px-6 py-3 bg-[#FFD700]/20 backdrop-blur-sm rounded-full border border-[#FFD700]/30">
-              <span className="text-[#FFD700] font-bold text-sm lg:text-base tracking-wide">SERVIÇO MÓVEL PREMIUM</span>
+              <span className="text-[#FFD700] font-bold text-sm lg:text-base tracking-wide">PREMIUM MOBILE SERVICE</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 lg:mb-8 leading-[1.1] tracking-tight">
               AutoGo –<br />
-              <span className="text-[#FFD700]">O Mecânico Vai Até Você.</span>
+              <span className="text-[#FFD700]">The Mechanic Comes to You.</span>
             </h1>
             
             <p className="text-xl sm:text-2xl lg:text-3xl text-white/95 mb-12 lg:mb-16 font-medium leading-relaxed max-w-3xl mx-auto">
-              Serviços mecânicos completos onde seu carro estiver.<br className="hidden sm:block" />
-              Em casa, no trabalho ou na estrada. Sem filas, sem deslocamento.
+              Complete mechanical services wherever your car is.<br className="hidden sm:block" />
+              At home, at work, or on the road. No lines, no hassle.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 lg:gap-6">
               <a
-                href="#agendamento"
+                href="#booking"
                 className="group w-full sm:w-auto bg-[#FFD700] hover:bg-[#FFC107] text-[#212121] px-10 lg:px-14 py-6 lg:py-7 rounded-full font-black text-lg lg:text-xl transition-all hover:scale-105 shadow-2xl hover:shadow-[#FFD700]/50 flex items-center justify-center gap-3 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
                 <Car className="w-6 h-6 lg:w-7 lg:h-7" strokeWidth={2.5} />
-                <span className="relative">SOLICITE UM SERVIÇO</span>
+                <span className="relative">REQUEST A SERVICE</span>
               </a>
               
               <a
-                href="#emergencia"
+                href="#emergency"
                 className="group w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white border-2 border-red-400 px-10 lg:px-14 py-6 lg:py-7 rounded-full font-black text-lg lg:text-xl transition-all hover:scale-105 shadow-2xl flex items-center justify-center gap-3 animate-pulse hover:animate-none relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
                 <Zap className="w-6 h-6 lg:w-7 lg:h-7" strokeWidth={2.5} />
-                <span className="relative">EMERGÊNCIA? CLIQUE AQUI (SOS)</span>
+                <span className="relative">EMERGENCY? CLICK HERE (SOS)</span>
               </a>
             </div>
           </div>
@@ -163,10 +163,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 lg:mb-24">
             <h2 className="text-4xl lg:text-6xl font-black text-[#212121] mb-6">
-              Como Funciona
+              How It Works
             </h2>
             <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Processo simples e transparente em 4 passos
+              Simple and transparent process in 4 steps
             </p>
           </div>
           
@@ -178,10 +178,10 @@ export default function Home() {
                 <span className="relative">1</span>
               </div>
               <h3 className="text-xl lg:text-2xl font-black text-[#212121] mb-3">
-                Escolha o Serviço
+                Choose the Service
               </h3>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                No site ou app
+                On website or app
               </p>
             </div>
 
@@ -192,10 +192,10 @@ export default function Home() {
                 <span className="relative">2</span>
               </div>
               <h3 className="text-xl lg:text-2xl font-black text-[#212121] mb-3">
-                Agende ou Peça Imediato
+                Schedule or Request Now
               </h3>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                Define local e horário
+                Set location and time
               </p>
             </div>
 
@@ -206,10 +206,10 @@ export default function Home() {
                 <span className="relative">3</span>
               </div>
               <h3 className="text-xl lg:text-2xl font-black text-[#212121] mb-3">
-                O Mecânico AutoGo Chega
+                AutoGo Mechanic Arrives
               </h3>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                Rastreie em tempo real
+                Track in real-time
               </p>
             </div>
 
@@ -219,10 +219,10 @@ export default function Home() {
                 <span className="relative">4</span>
               </div>
               <h3 className="text-xl lg:text-2xl font-black text-[#212121] mb-3">
-                Pague com Segurança
+                Pay Securely
               </h3>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                Online, recibo digital
+                Online, digital receipt
               </p>
             </div>
           </div>
@@ -234,10 +234,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 lg:mb-24">
             <h2 className="text-4xl lg:text-6xl font-black text-[#212121] mb-6">
-              Nossos Serviços
+              Our Services
             </h2>
             <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Soluções completas com preços transparentes
+              Complete solutions with transparent pricing
             </p>
           </div>
           
@@ -279,10 +279,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 lg:mb-20">
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-6">
-              Por Que Escolher a AutoGo?
+              Why Choose AutoGo?
             </h2>
             <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto">
-              Diferenciais que fazem toda a diferença
+              Differentials that make all the difference
             </p>
           </div>
           
@@ -309,10 +309,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 lg:mb-20">
             <h2 className="text-4xl lg:text-6xl font-black text-[#212121] mb-6">
-              Atendemos Nestas Regiões
+              We Serve These Regions
             </h2>
             <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Cobertura completa em Connecticut e New York
+              Complete coverage in Connecticut and New York
             </p>
           </div>
           
@@ -365,16 +365,16 @@ export default function Home() {
               <div>
                 <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-[#FFD700]/20 backdrop-blur-sm rounded-full border border-[#FFD700]/30">
                   <Users className="w-5 h-5 text-[#FFD700]" strokeWidth={2.5} />
-                  <span className="text-[#FFD700] font-bold text-sm tracking-wide">SOLUÇÃO CORPORATIVA</span>
+                  <span className="text-[#FFD700] font-bold text-sm tracking-wide">CORPORATE SOLUTION</span>
                 </div>
                 
                 <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
-                  Para Sua Empresa<br />
+                  For Your Business<br />
                   <span className="text-[#FFD700]">(AutoGo Fleet)</span>
                 </h2>
                 
                 <p className="text-xl lg:text-2xl text-white/90 mb-10 leading-relaxed">
-                  Soluções de manutenção móvel e gestão para sua frota. Planos de assinatura mensal, relatórios e agendamento automático.
+                  Mobile maintenance and fleet management solutions. Monthly subscription plans, reports, and automatic scheduling.
                 </p>
                 
                 <a
@@ -382,26 +382,26 @@ export default function Home() {
                   className="inline-flex items-center gap-3 bg-[#FFD700] hover:bg-[#FFC107] text-[#212121] px-10 py-5 rounded-full font-black text-lg transition-all hover:scale-105 shadow-2xl"
                 >
                   <Users className="w-6 h-6" strokeWidth={2.5} />
-                  SAIBA MAIS PARA FROTAS
+                  LEARN MORE FOR FLEETS
                 </a>
               </div>
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
                   <CheckCircle className="w-10 h-10 text-[#FFD700] mb-4" strokeWidth={2.5} />
-                  <p className="text-white font-bold text-lg">Planos Mensais</p>
+                  <p className="text-white font-bold text-lg">Monthly Plans</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
                   <FileText className="w-10 h-10 text-[#FFD700] mb-4" strokeWidth={2.5} />
-                  <p className="text-white font-bold text-lg">Relatórios Detalhados</p>
+                  <p className="text-white font-bold text-lg">Detailed Reports</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
                   <Clock className="w-10 h-10 text-[#FFD700] mb-4" strokeWidth={2.5} />
-                  <p className="text-white font-bold text-lg">Agendamento Auto</p>
+                  <p className="text-white font-bold text-lg">Auto Scheduling</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
                   <Shield className="w-10 h-10 text-[#FFD700] mb-4" strokeWidth={2.5} />
-                  <p className="text-white font-bold text-lg">Gestão Completa</p>
+                  <p className="text-white font-bold text-lg">Complete Management</p>
                 </div>
               </div>
             </div>
@@ -417,16 +417,16 @@ export default function Home() {
               <div className="text-center lg:text-left">
                 <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-[#0033A0]/10 rounded-full">
                   <Smartphone className="w-5 h-5 text-[#0033A0]" strokeWidth={2.5} />
-                  <span className="text-[#0033A0] font-bold text-sm tracking-wide">BAIXE O APP</span>
+                  <span className="text-[#0033A0] font-bold text-sm tracking-wide">DOWNLOAD THE APP</span>
                 </div>
                 
                 <h2 className="text-4xl lg:text-5xl font-black text-[#212121] mb-6">
-                  Mais fácil e rápido<br />
-                  pelo <span className="text-[#0033A0]">App AutoGo</span>
+                  Easier and Faster<br />
+                  with the <span className="text-[#0033A0]">AutoGo App</span>
                 </h2>
                 
                 <p className="text-xl lg:text-2xl text-gray-600 mb-10 leading-relaxed">
-                  Agendamento, SOS prioritário, rastreamento e histórico no seu celular.
+                  Scheduling, priority SOS, tracking, and history on your phone.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -459,19 +459,19 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-lg">
                   <Clock className="w-10 h-10 text-[#0033A0] mb-4" strokeWidth={2.5} />
-                  <p className="text-lg font-bold text-[#212121]">Agendamento Rápido</p>
+                  <p className="text-lg font-bold text-[#212121]">Quick Scheduling</p>
                 </div>
                 <div className="bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-lg">
                   <Zap className="w-10 h-10 text-[#FFD700] mb-4" strokeWidth={2.5} />
-                  <p className="text-lg font-bold text-[#212121]">SOS Prioritário</p>
+                  <p className="text-lg font-bold text-[#212121]">Priority SOS</p>
                 </div>
                 <div className="bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-lg">
                   <MapPin className="w-10 h-10 text-[#0033A0] mb-4" strokeWidth={2.5} />
-                  <p className="text-lg font-bold text-[#212121]">Rastreamento Real</p>
+                  <p className="text-lg font-bold text-[#212121]">Real-Time Tracking</p>
                 </div>
                 <div className="bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-lg">
                   <FileText className="w-10 h-10 text-[#FFD700] mb-4" strokeWidth={2.5} />
-                  <p className="text-lg font-bold text-[#212121]">Histórico Digital</p>
+                  <p className="text-lg font-bold text-[#212121]">Digital History</p>
                 </div>
               </div>
             </div>
@@ -495,16 +495,16 @@ export default function Home() {
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-block mb-8 px-8 py-4 bg-[#0033A0]/20 backdrop-blur-sm rounded-full border-2 border-[#0033A0]/30">
-            <span className="text-[#0033A0] font-black text-lg tracking-wide">ATENDIMENTO IMEDIATO</span>
+            <span className="text-[#0033A0] font-black text-lg tracking-wide">IMMEDIATE SERVICE</span>
           </div>
 
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#212121] mb-8 lg:mb-12 leading-[1.1]">
-            Precisa de um Mecânico?<br />
-            <span className="text-[#0033A0]">Fale Conosco Agora!</span>
+            Need a Mechanic?<br />
+            <span className="text-[#0033A0]">Contact Us Now!</span>
           </h2>
           
           <p className="text-2xl lg:text-3xl text-[#212121]/80 font-bold mb-12 lg:mb-16 max-w-3xl mx-auto">
-            Atendimento rápido, profissional e no local que você precisar
+            Fast, professional service wherever you need it
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 lg:gap-6 mb-12">
@@ -532,15 +532,15 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10 text-[#212121]/80">
             <div className="flex items-center gap-3">
               <CheckCircle className="w-6 h-6 text-[#0033A0]" strokeWidth={2.5} />
-              <span className="font-bold text-lg">Orçamento Grátis</span>
+              <span className="font-bold text-lg">Free Quote</span>
             </div>
             <div className="flex items-center gap-3">
               <CheckCircle className="w-6 h-6 text-[#0033A0]" strokeWidth={2.5} />
-              <span className="font-bold text-lg">Atendimento 24/7</span>
+              <span className="font-bold text-lg">24/7 Service</span>
             </div>
             <div className="flex items-center gap-3">
               <CheckCircle className="w-6 h-6 text-[#0033A0]" strokeWidth={2.5} />
-              <span className="font-bold text-lg">Garantia Total</span>
+              <span className="font-bold text-lg">Full Warranty</span>
             </div>
           </div>
         </div>
@@ -559,21 +559,21 @@ export default function Home() {
                 className="h-12 w-auto mb-6 brightness-0 invert"
               />
               <p className="text-white/70 text-lg leading-relaxed">
-                Serviços mecânicos móveis premium para Connecticut e New York.
+                Premium mobile mechanical services for Connecticut and New York.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-black text-white mb-6">Links Rápidos</h3>
+              <h3 className="text-xl font-black text-white mb-6">Quick Links</h3>
               <ul className="space-y-3">
-                <li><a href="#" className="text-white/70 hover:text-[#FFD700] transition-colors text-lg">Política de Privacidade</a></li>
-                <li><a href="#" className="text-white/70 hover:text-[#FFD700] transition-colors text-lg">Termos de Uso</a></li>
-                <li><a href="#" className="text-white/70 hover:text-[#FFD700] transition-colors text-lg">Contato</a></li>
+                <li><a href="#" className="text-white/70 hover:text-[#FFD700] transition-colors text-lg">Privacy Policy</a></li>
+                <li><a href="#" className="text-white/70 hover:text-[#FFD700] transition-colors text-lg">Terms of Use</a></li>
+                <li><a href="#" className="text-white/70 hover:text-[#FFD700] transition-colors text-lg">Contact</a></li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-xl font-black text-white mb-6">Contato</h3>
+              <h3 className="text-xl font-black text-white mb-6">Contact</h3>
               <div className="space-y-4">
                 <a href={`tel:${phoneNumber.replace(/\D/g, '')}`} className="flex items-center gap-3 text-white/70 hover:text-[#FFD700] transition-colors text-lg">
                   <Phone className="w-5 h-5" strokeWidth={2.5} />
@@ -590,11 +590,11 @@ export default function Home() {
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-white/60 text-base text-center md:text-left">
-                © {new Date().getFullYear()} <span className="font-bold text-white">AutoGo LLC</span> - Todos os direitos reservados
+                © {new Date().getFullYear()} <span className="font-bold text-white">AutoGo LLC</span> - All rights reserved
               </p>
               <div className="flex items-center gap-3 px-6 py-3 bg-white/5 rounded-full border border-white/10">
                 <Shield className="w-5 h-5 text-[#FFD700]" strokeWidth={2.5} />
-                <span className="text-white/80 font-bold text-sm">Licenciado e Segurado • Mobile Auto Repair Permit</span>
+                <span className="text-white/80 font-bold text-sm">Licensed and Insured • Mobile Auto Repair Permit</span>
               </div>
             </div>
           </div>
