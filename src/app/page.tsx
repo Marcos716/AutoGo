@@ -136,7 +136,7 @@ export default function Home() {
                 alt="AutoGo"
                 width={180}
                 height={60}
-                className="h-12 lg:h-16 w-auto"
+                className="h-16 lg:h-16 w-auto"
                 priority
               />
             </div>
