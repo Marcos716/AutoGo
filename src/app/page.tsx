@@ -1,12 +1,11 @@
 "use client"
 
-import { Phone, MessageCircle, Wrench, Zap, Clock, Droplet, CircleDot, Cog, Shield, CheckCircle, MapPin, Smartphone, Car, Users, FileText, Apple } from "lucide-react"
+import { Phone, MessageCircle, Wrench, Zap, Clock, Droplet, CircleDot, Cog, Shield, CheckCircle, MapPin, Car, Users, FileText } from "lucide-react"
 import Image from "next/image"
 
 export default function Home() {
-  const phoneNumber = "(203) 555-0123"
-  const whatsappNumber = "12035550123"
-  const whatsappMessage = "Hello! I need a mechanic."
+  const phoneNumber = "(475) 370-0824"
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=14753700824&text&type=phone_number&app_absent=0"
 
   const services = [
     { 
@@ -53,13 +52,76 @@ export default function Home() {
     { icon: CheckCircle, text: "Secure and Transparent Online Payment" },
     { icon: FileText, text: "Complete Digital Vehicle History" },
     { icon: Wrench, text: "Warranty on All Services" },
-    { icon: Smartphone, text: "App with Real-Time Tracking" },
   ]
 
   const cities = {
     CT: ["Bridgeport", "Waterbury", "Stamford", "New Haven"],
     NY: ["White Plains", "Bronx", "Queens", "Long Island"]
   }
+
+  const packages = [
+    {
+      name: "START PACKAGE",
+      badge: "Basic",
+      description: "For those who want practical maintenance and basic safety",
+      features: [
+        "Oil and filter change (parts and labor included)",
+        "Tire pressure check",
+        "Simple electronic diagnostics",
+        "25-point safety check-up"
+      ],
+      checkItems: [
+        "Front and rear brakes",
+        "Suspension system",
+        "Fluid levels",
+        "Lighting system",
+        "Battery and charging"
+      ],
+      idealFor: "Drivers who want to keep their car up to date without spending much",
+      color: "from-blue-500 to-blue-600"
+    },
+    {
+      name: "FULL CARE PACKAGE",
+      badge: "Most Popular",
+      description: "The most chosen — predictive maintenance + comfort",
+      features: [
+        "Everything from START +",
+        "All filter changes (engine, cabin, and fuel)",
+        "Complete air conditioning sanitization",
+        "Light electrical inspection",
+        "Basic brake and steering system adjustment"
+      ],
+      benefits: [
+        "Reduced fuel consumption",
+        "Cleaner air inside the car",
+        "Quieter car",
+        "Smoother operation"
+      ],
+      idealFor: "Those who drive every day, families, professionals who depend on their car",
+      color: "from-yellow-500 to-orange-500",
+      popular: true
+    },
+    {
+      name: "MASTER CARE PACKAGE",
+      badge: "Premium",
+      description: "Maximum automotive care experience",
+      features: [
+        "Everything from FULL CARE +",
+        "Deep inspection of complete brakes",
+        "Complete electrical system",
+        "Cooling system",
+        "Advanced computerized diagnostics"
+      ],
+      benefits: [
+        "Safer car",
+        "Lower chance of breakdowns",
+        "Extended parts lifespan",
+        "Registered history for future maintenance"
+      ],
+      idealFor: "Those who want total safety, owners of semi-new or premium cars, those who want future resale value",
+      color: "from-purple-500 to-indigo-600"
+    }
+  ]
 
   return (
     <div className="min-h-screen bg-white">
@@ -92,7 +154,7 @@ export default function Home() {
               </a>
               
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#FFD700] hover:bg-[#FFC107] text-[#212121] px-6 lg:px-8 py-3 lg:py-4 rounded-full font-black text-sm lg:text-base flex items-center gap-2 transition-all hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -137,7 +199,9 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 lg:gap-6">
               <a
-                href="#booking"
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group w-full sm:w-auto bg-[#FFD700] hover:bg-[#FFC107] text-[#212121] px-10 lg:px-14 py-6 lg:py-7 rounded-full font-black text-lg lg:text-xl transition-all hover:scale-105 shadow-2xl hover:shadow-[#FFD700]/50 flex items-center justify-center gap-3 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
@@ -146,7 +210,9 @@ export default function Home() {
               </a>
               
               <a
-                href="#emergency"
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white border-2 border-red-400 px-10 lg:px-14 py-6 lg:py-7 rounded-full font-black text-lg lg:text-xl transition-all hover:scale-105 shadow-2xl flex items-center justify-center gap-3 animate-pulse hover:animate-none relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
@@ -181,7 +247,7 @@ export default function Home() {
                 Choose the Service
               </h3>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                On website or app
+                On website or WhatsApp
               </p>
             </div>
 
@@ -209,7 +275,7 @@ export default function Home() {
                 AutoGo Mechanic Arrives
               </h3>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                Track in real-time
+                Professional service
               </p>
             </div>
 
@@ -267,6 +333,103 @@ export default function Home() {
                       {service.price}
                     </span>
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICE PACKAGES - New Section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 lg:mb-24">
+            <h2 className="text-4xl lg:text-6xl font-black text-[#212121] mb-6">
+              AutoGo Service Packages
+            </h2>
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
+              Choose the perfect plan for your vehicle's needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+            {packages.map((pkg, index) => (
+              <div
+                key={index}
+                className={`relative bg-white rounded-3xl border-2 ${pkg.popular ? 'border-[#FFD700] shadow-2xl scale-105' : 'border-gray-100'} overflow-hidden transition-all hover:shadow-2xl hover:scale-105`}
+              >
+                {pkg.popular && (
+                  <div className="absolute top-0 right-0 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-2 rounded-bl-2xl font-black text-sm">
+                    MOST POPULAR
+                  </div>
+                )}
+                
+                <div className={`bg-gradient-to-r ${pkg.color} p-8 text-white`}>
+                  <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-4">
+                    {pkg.badge}
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-black mb-3">
+                    {pkg.name}
+                  </h3>
+                  <p className="text-lg opacity-90">
+                    {pkg.description}
+                  </p>
+                </div>
+
+                <div className="p-8">
+                  <div className="mb-6">
+                    <h4 className="text-lg font-black text-[#212121] mb-4">What You Get:</h4>
+                    <ul className="space-y-3">
+                      {pkg.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                          <span className="text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {pkg.checkItems && (
+                    <div className="mb-6 p-4 bg-gray-50 rounded-2xl">
+                      <h5 className="text-sm font-black text-[#212121] mb-3">Items Checked:</h5>
+                      <ul className="space-y-2">
+                        {pkg.checkItems.map((item, idx) => (
+                          <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                            <div className="w-1.5 h-1.5 bg-[#0033A0] rounded-full"></div>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {pkg.benefits && (
+                    <div className="mb-6">
+                      <h4 className="text-lg font-black text-[#212121] mb-4">Benefits:</h4>
+                      <ul className="space-y-3">
+                        {pkg.benefits.map((benefit, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <Zap className="w-5 h-5 text-[#FFD700] flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                            <span className="text-gray-700">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  <div className="mb-6 p-4 bg-blue-50 rounded-2xl">
+                    <h5 className="text-sm font-black text-[#212121] mb-2">Ideal For:</h5>
+                    <p className="text-sm text-gray-700">{pkg.idealFor}</p>
+                  </div>
+
+                  <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block w-full text-center bg-gradient-to-r ${pkg.color} hover:opacity-90 text-white px-8 py-4 rounded-full font-black text-lg transition-all hover:scale-105 shadow-lg`}
+                  >
+                    SELECT {pkg.name.split(' ')[0]}
+                  </a>
                 </div>
               </div>
             ))}
@@ -378,7 +541,9 @@ export default function Home() {
                 </p>
                 
                 <a
-                  href="#fleet"
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-[#FFD700] hover:bg-[#FFC107] text-[#212121] px-10 py-5 rounded-full font-black text-lg transition-all hover:scale-105 shadow-2xl"
                 >
                   <Users className="w-6 h-6" strokeWidth={2.5} />
@@ -402,76 +567,6 @@ export default function Home() {
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
                   <Shield className="w-10 h-10 text-[#FFD700] mb-4" strokeWidth={2.5} />
                   <p className="text-white font-bold text-lg">Complete Management</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* APP DOWNLOAD */}
-      <section className="py-20 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl lg:rounded-[3rem] p-10 lg:p-16 border-2 border-gray-100 shadow-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-              <div className="text-center lg:text-left">
-                <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-[#0033A0]/10 rounded-full">
-                  <Smartphone className="w-5 h-5 text-[#0033A0]" strokeWidth={2.5} />
-                  <span className="text-[#0033A0] font-bold text-sm tracking-wide">DOWNLOAD THE APP</span>
-                </div>
-                
-                <h2 className="text-4xl lg:text-5xl font-black text-[#212121] mb-6">
-                  Easier and Faster<br />
-                  with the <span className="text-[#0033A0]">AutoGo App</span>
-                </h2>
-                
-                <p className="text-xl lg:text-2xl text-gray-600 mb-10 leading-relaxed">
-                  Scheduling, priority SOS, tracking, and history on your phone.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center gap-3 bg-black hover:bg-gray-900 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 shadow-xl"
-                  >
-                    <Apple className="w-8 h-8" strokeWidth={2.5} />
-                    <div className="text-left">
-                      <div className="text-xs opacity-80">Download on the</div>
-                      <div className="text-lg font-black">App Store</div>
-                    </div>
-                  </a>
-                  
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center gap-3 bg-black hover:bg-gray-900 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 shadow-xl"
-                  >
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-                    </svg>
-                    <div className="text-left">
-                      <div className="text-xs opacity-80">GET IT ON</div>
-                      <div className="text-lg font-black">Google Play</div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-lg">
-                  <Clock className="w-10 h-10 text-[#0033A0] mb-4" strokeWidth={2.5} />
-                  <p className="text-lg font-bold text-[#212121]">Quick Scheduling</p>
-                </div>
-                <div className="bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-lg">
-                  <Zap className="w-10 h-10 text-[#FFD700] mb-4" strokeWidth={2.5} />
-                  <p className="text-lg font-bold text-[#212121]">Priority SOS</p>
-                </div>
-                <div className="bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-lg">
-                  <MapPin className="w-10 h-10 text-[#0033A0] mb-4" strokeWidth={2.5} />
-                  <p className="text-lg font-bold text-[#212121]">Real-Time Tracking</p>
-                </div>
-                <div className="bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-lg">
-                  <FileText className="w-10 h-10 text-[#FFD700] mb-4" strokeWidth={2.5} />
-                  <p className="text-lg font-bold text-[#212121]">Digital History</p>
                 </div>
               </div>
             </div>
@@ -518,7 +613,7 @@ export default function Home() {
             </a>
             
             <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+              href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="group w-full sm:w-auto bg-white hover:bg-gray-50 text-[#212121] px-12 lg:px-16 py-6 lg:py-8 rounded-full font-black text-xl lg:text-2xl flex items-center justify-center gap-4 transition-all hover:scale-105 shadow-2xl relative overflow-hidden"
@@ -579,7 +674,7 @@ export default function Home() {
                   <Phone className="w-5 h-5" strokeWidth={2.5} />
                   {phoneNumber}
                 </a>
-                <a href={`https://wa.me/${whatsappNumber}`} className="flex items-center gap-3 text-white/70 hover:text-[#FFD700] transition-colors text-lg">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/70 hover:text-[#FFD700] transition-colors text-lg">
                   <MessageCircle className="w-5 h-5" strokeWidth={2.5} />
                   WhatsApp
                 </a>
