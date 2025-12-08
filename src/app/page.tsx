@@ -644,37 +644,51 @@ export default function Home() {
       {/* FOOTER - Professional & Legal */}
       <footer className="bg-[#212121] text-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-10">
+            {/* Logo & Description */}
             <div>
               <Image
                 src="https://k6hrqrxuu8obbfwn.public.blob.vercel-storage.com/temp/7e8da001-64eb-4190-81af-83897f2d4a91.png"
                 alt="AutoGo"
                 width={180}
                 height={60}
-                className="h-12 w-auto mb-6 brightness-0 invert"
+                className="h-12 w-auto mb-6"
               />
-              <p className="text-white/70 text-lg leading-relaxed">
+              <p className="text-white/70 text-base leading-relaxed">
                 Premium mobile mechanical services for Connecticut and New York.
               </p>
             </div>
 
+            {/* Quick Links */}
             <div>
-              <h3 className="text-xl font-black text-white mb-6">Quick Links</h3>
+              <h3 className="text-lg font-black text-white mb-4">Company</h3>
               <ul className="space-y-3">
-                <li><a href="#" className="text-white/70 hover:text-[#FFD700] transition-colors text-lg">Privacy Policy</a></li>
-                <li><a href="#" className="text-white/70 hover:text-[#FFD700] transition-colors text-lg">Terms of Use</a></li>
-                <li><a href="#" className="text-white/70 hover:text-[#FFD700] transition-colors text-lg">Contact</a></li>
+                <li><a href="/privacy-policy" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Privacy Policy</a></li>
+                <li><a href="/terms-of-service" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Terms of Service</a></li>
+                <li><a href="/contact" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Contact</a></li>
               </ul>
             </div>
 
+            {/* Services */}
             <div>
-              <h3 className="text-xl font-black text-white mb-6">Contact</h3>
+              <h3 className="text-lg font-black text-white mb-4">Services</h3>
+              <ul className="space-y-3">
+                <li><a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Preventive Maintenance</a></li>
+                <li><a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Electronic Diagnostics</a></li>
+                <li><a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Emergency Service</a></li>
+                <li><a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Fleet Management</a></li>
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h3 className="text-lg font-black text-white mb-4">Contact</h3>
               <div className="space-y-4">
-                <a href={`tel:${phoneNumber.replace(/\D/g, '')}`} className="flex items-center gap-3 text-white/70 hover:text-[#FFD700] transition-colors text-lg">
+                <a href={`tel:${phoneNumber.replace(/\D/g, '')}`} className="flex items-center gap-3 text-white/70 hover:text-[#FFD700] transition-colors text-base">
                   <Phone className="w-5 h-5" strokeWidth={2.5} />
                   {phoneNumber}
                 </a>
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/70 hover:text-[#FFD700] transition-colors text-lg">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/70 hover:text-[#FFD700] transition-colors text-base">
                   <MessageCircle className="w-5 h-5" strokeWidth={2.5} />
                   WhatsApp
                 </a>
@@ -684,7 +698,7 @@ export default function Home() {
 
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <p className="text-white/60 text-base text-center md:text-left">
+              <p className="text-white/60 text-sm text-center md:text-left">
                 © {new Date().getFullYear()} <span className="font-bold text-white">AutoGo LLC</span> - All rights reserved
               </p>
               <div className="flex items-center gap-3 px-6 py-3 bg-white/5 rounded-full border border-white/10">
