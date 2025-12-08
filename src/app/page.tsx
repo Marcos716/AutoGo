@@ -55,7 +55,7 @@ export default function Home() {
   ]
 
   const cities = {
-    CT: ["Bridgeport", "Waterbury", "Stamford", "New Haven"],
+    CT: ["Bridgeport", "Waterbury", "Stamford", "New Haven", "Danbury"],
     NY: ["White Plains", "Bronx", "Queens", "Long Island"]
   }
 
@@ -472,7 +472,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 lg:mb-20">
             <h2 className="text-4xl lg:text-6xl font-black text-[#212121] mb-6">
-              We Serve These Regions
+              Service Areas
             </h2>
             <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
               Complete coverage in Connecticut and New York
@@ -480,7 +480,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-            <div className="bg-gradient-to-br from-gray-50 to-white p-10 lg:p-12 rounded-3xl border-2 border-gray-100 shadow-xl">
+            <div className="bg-white p-8 rounded-3xl border-2 border-gray-100 shadow-xl">
               <div className="flex items-center gap-4 mb-8">
                 <div className="p-4 rounded-2xl bg-[#0033A0]/10">
                   <MapPin className="w-10 h-10 text-[#0033A0]" strokeWidth={2.5} />
