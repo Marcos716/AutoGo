@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function Home() {
   const phoneNumber = "(475) 370-0824"
-  const whatsappLink = "https://api.whatsapp.com/send/?phone=14753700824&text&type=phone_number&app_absent=0"
+  const smsLink = "sms:+14753700824"
 
   const services = [
     { 
@@ -154,13 +154,11 @@ export default function Home() {
               </a>
               
               <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={smsLink}
                 className="bg-[#FFD700] hover:bg-[#FFC107] text-[#212121] px-6 lg:px-8 py-3 lg:py-4 rounded-full font-black text-sm lg:text-base flex items-center gap-2 transition-all hover:scale-105 shadow-xl hover:shadow-2xl"
               >
                 <MessageCircle className="w-5 h-5" strokeWidth={2.5} />
-                <span>WHATSAPP</span>
+                <span>TEXT US</span>
               </a>
             </div>
           </div>
@@ -199,9 +197,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 lg:gap-6">
               <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={smsLink}
                 className="group w-full sm:w-auto bg-[#FFD700] hover:bg-[#FFC107] text-[#212121] px-10 lg:px-14 py-6 lg:py-7 rounded-full font-black text-lg lg:text-xl transition-all hover:scale-105 shadow-2xl hover:shadow-[#FFD700]/50 flex items-center justify-center gap-3 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
@@ -210,9 +206,7 @@ export default function Home() {
               </a>
               
               <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={smsLink}
                 className="group w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white border-2 border-red-400 px-10 lg:px-14 py-6 lg:py-7 rounded-full font-black text-lg lg:text-xl transition-all hover:scale-105 shadow-2xl flex items-center justify-center gap-3 animate-pulse hover:animate-none relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
@@ -247,7 +241,7 @@ export default function Home() {
                 Choose the Service
               </h3>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                On website or WhatsApp
+                On website or Text
               </p>
             </div>
 
@@ -423,9 +417,7 @@ export default function Home() {
                   </div>
 
                   <a
-                    href={whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={smsLink}
                     className={`block w-full text-center bg-gradient-to-r ${pkg.color} hover:opacity-90 text-white px-8 py-4 rounded-full font-black text-lg transition-all hover:scale-105 shadow-lg`}
                   >
                     SELECT {pkg.name.split(' ')[0]}
@@ -541,9 +533,7 @@ export default function Home() {
                 </p>
                 
                 <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={smsLink}
                   className="inline-flex items-center gap-3 bg-[#FFD700] hover:bg-[#FFC107] text-[#212121] px-10 py-5 rounded-full font-black text-lg transition-all hover:scale-105 shadow-2xl"
                 >
                   <Users className="w-6 h-6" strokeWidth={2.5} />
@@ -613,14 +603,12 @@ export default function Home() {
             </a>
             
             <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={smsLink}
               className="group w-full sm:w-auto bg-white hover:bg-gray-50 text-[#212121] px-12 lg:px-16 py-6 lg:py-8 rounded-full font-black text-xl lg:text-2xl flex items-center justify-center gap-4 transition-all hover:scale-105 shadow-2xl relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FFD700]/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
               <MessageCircle className="w-8 h-8 relative" strokeWidth={2.5} />
-              <span className="relative">WHATSAPP</span>
+              <span className="relative">TEXT US</span>
             </a>
           </div>
 
@@ -673,10 +661,10 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-black text-white mb-4">Services</h3>
               <ul className="space-y-3">
-                <li><a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Preventive Maintenance</a></li>
-                <li><a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Electronic Diagnostics</a></li>
-                <li><a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Emergency Service</a></li>
-                <li><a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Fleet Management</a></li>
+                <li><a href={smsLink} className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Preventive Maintenance</a></li>
+                <li><a href={smsLink} className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Electronic Diagnostics</a></li>
+                <li><a href={smsLink} className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Emergency Service</a></li>
+                <li><a href={smsLink} className="text-white/70 hover:text-[#FFD700] transition-colors text-base">Fleet Management</a></li>
               </ul>
             </div>
 
@@ -688,9 +676,9 @@ export default function Home() {
                   <Phone className="w-5 h-5" strokeWidth={2.5} />
                   {phoneNumber}
                 </a>
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/70 hover:text-[#FFD700] transition-colors text-base">
+                <a href={smsLink} className="flex items-center gap-3 text-white/70 hover:text-[#FFD700] transition-colors text-base">
                   <MessageCircle className="w-5 h-5" strokeWidth={2.5} />
-                  WhatsApp
+                  Text Us
                 </a>
               </div>
             </div>
